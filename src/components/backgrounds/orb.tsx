@@ -13,7 +13,7 @@ interface OrbProps {
 
 export default function Orb({ languages }: OrbProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const intervalRef = useRef<NodeJS.Timeout>()
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     intervalRef.current = setInterval(() => {
