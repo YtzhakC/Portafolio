@@ -9,11 +9,9 @@ import Services from "../components/services"
 import Projects from "../components/projects"
 import Contact from "../components/contact"
 import Aurora from "../components/backgrounds/aurora"
-import { useLanguage } from "../context/language-context"
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
-  const { language } = useLanguage()
 
   useEffect(() => {
     setMounted(true)
