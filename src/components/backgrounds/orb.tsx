@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import Image from "next/image"
 
 interface OrbProps {
   languages: {
@@ -16,10 +15,17 @@ export default function Orb({ languages }: OrbProps) {
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
+    // Clear any existing interval
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current)
+    }
+
+    // Set new interval
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % languages.length)
     }, 4000)
 
+    // Cleanup on unmount
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current)
@@ -41,12 +47,11 @@ export default function Orb({ languages }: OrbProps) {
           className="absolute inset-0 flex items-center justify-center"
         >
           <div className="flex flex-col items-center">
-            <div className="w-16 h-16 relative">
-              <Image
+            <div className="w-16 h-16 relative flex items-center justify-center">
+              <img
                 src={languages[currentIndex].icon || "/placeholder.svg"}
                 alt={languages[currentIndex].name}
-                fill
-                className="object-contain"
+                className="w-12 h-12 object-contain"
               />
             </div>
             <p className="mt-2 text-sm font-medium text-blue-200">{languages[currentIndex].name}</p>
