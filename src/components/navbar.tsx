@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useLanguage } from "../context/language-context"
 import { Menu, X } from "lucide-react"
+import "../styles/language-switch.css"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -59,8 +60,10 @@ export default function Navbar() {
 
   const navItems = [
     { id: "profile", label: translations[language].profile },
+    { id: "about-me", label: translations[language].aboutMe },
     { id: "objectives", label: translations[language].objectives },
     { id: "mission-vision", label: translations[language].missionVisionValues },
+    { id: "skills", label: translations[language].skills },
     { id: "certifications", label: translations[language].certifications },
     { id: "services", label: translations[language].services },
     { id: "projects", label: translations[language].projects },
@@ -110,14 +113,21 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center">
-          <motion.button
-            onClick={toggleLanguage}
-            className="px-4 py-2 rounded-full bg-blue-800/50 hover:bg-blue-700/50 text-blue-100 transition-colors backdrop-blur-sm mr-4"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {language === "en" ? "ES" : "EN"}
-          </motion.button>
+          {/* Language Switch based on checkbox */}
+          <div className="language-switch-container mr-4">
+            <input
+              type="checkbox"
+              id="language-toggle"
+              className="language-checkbox"
+              checked={language === "es"}
+              onChange={toggleLanguage}
+            />
+            <label htmlFor="language-toggle" className="language-label">
+              <span className="language-en">EN</span>
+              <span className="language-es">ES</span>
+              <span className="language-slider"></span>
+            </label>
+          </div>
 
           <motion.button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

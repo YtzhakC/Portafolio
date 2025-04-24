@@ -16,24 +16,31 @@ export default function Objectives() {
   const y = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"])
   const { language, translations } = useLanguage()
 
+  // Reemplazar el contenido estático con traducciones dinámicas
   const objectives = [
     {
       icon: <Target className="w-12 h-12 text-blue-400" />,
-      title: "Crecimiento Profesional",
+      title: language === "en" ? "Professional Growth" : "Crecimiento Profesional",
       description:
-        "Seguir creciendo profesionalmente, aprendiendo nuevas tecnologías y metodologías para mejorar mis habilidades como desarrollador.",
+        language === "en"
+          ? "Continue growing professionally, learning new technologies and methodologies to improve my skills as a developer."
+          : "Seguir creciendo profesionalmente, aprendiendo nuevas tecnologías y metodologías para mejorar mis habilidades como desarrollador.",
     },
     {
       icon: <TrendingUp className="w-12 h-12 text-blue-400" />,
-      title: "Colaboración y Trabajo en Equipo",
+      title: language === "en" ? "Collaboration and Teamwork" : "Colaboración y Trabajo en Equipo",
       description:
-        "Trabajar en equipo, colaborar con otros profesionales y construir soluciones que tengan un impacto real en la vida de las personas.",
+        language === "en"
+          ? "Work in teams, collaborate with other professionals and build solutions that have a real impact on people's lives."
+          : "Trabajar en equipo, colaborar con otros profesionales y construir soluciones que tengan un impacto real en la vida de las personas.",
     },
     {
       icon: <Lightbulb className="w-12 h-12 text-blue-400" />,
-      title: "Innovación y Mejora Continua",
+      title: language === "en" ? "Innovation and Continuous Improvement" : "Innovación y Mejora Continua",
       description:
-        "Desafiarme a salir de mi zona de confort, seguir sumando logros y disfrutar del proceso de aprendizaje en cada paso del camino.",
+        language === "en"
+          ? "Challenge myself to step out of my comfort zone, continue adding achievements and enjoy the learning process at every step of the way."
+          : "Desafiarme a salir de mi zona de confort, seguir sumando logros y disfrutar del proceso de aprendizaje en cada paso del camino.",
     },
   ]
 

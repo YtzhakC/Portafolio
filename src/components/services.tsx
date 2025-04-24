@@ -34,9 +34,8 @@ export default function Services() {
     },
     {
       icon: <Server className="w-12 h-12 text-blue-400" />,
-      title: "Backend Development",
-      description:
-        "Building robust server-side applications and APIs that power web applications with efficient data processing and business logic.",
+      title: translations[language].backendDevelopment,
+      description: translations[language].backendDevelopmentDesc,
     },
   ]
 

@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useLanguage } from "../context/language-context"
-import LanguageScroller from "./language-scroller"
 import { useRef } from "react"
 
 export default function Hero() {
@@ -15,45 +14,6 @@ export default function Hero() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"])
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
-
-  const languages = [
-    {
-      name: "Python",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    },
-    {
-      name: "HTML",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-    },
-    {
-      name: "CSS",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-    },
-    {
-      name: "JavaScript",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    },
-    {
-      name: "ReactJS",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    },
-    {
-      name: "NextJS",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-    },
-    {
-      name: "MySQL",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-    },
-    {
-      name: "Java",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-    },
-    {
-      name: "Git",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-    },
-  ]
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -104,24 +64,17 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
-        <motion.h1
-          className="text-5xl md:text-7xl font-bold mb-6 gradient-text text-transparent bg-clip-text"
-          variants={itemVariants}
-        >
+        <motion.h1 className="text-4xl md:text-5xl font-bold mb-6 text-blue-300" variants={itemVariants}>
           Ytzhak Carvajal
         </motion.h1>
 
-        <motion.h2 className="text-2xl md:text-3xl text-blue-300 mb-8" variants={itemVariants}>
+        <motion.h2 className="text-xl md:text-2xl text-blue-300 mb-8" variants={itemVariants}>
           {translations[language].heroTitle}
         </motion.h2>
 
         <motion.p className="text-lg text-blue-200 mb-12 max-w-2xl mx-auto" variants={itemVariants}>
           {translations[language].heroDescription}
         </motion.p>
-
-        <motion.div className="mb-12 w-full overflow-hidden" variants={itemVariants}>
-          <LanguageScroller languages={languages} />
-        </motion.div>
 
         <motion.div variants={itemVariants} className="flex items-center justify-center gap-8">
           {/* Left scroll indicator */}

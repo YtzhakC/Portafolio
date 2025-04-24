@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
 :root {
   --foreground-rgb: 255, 255, 255;
@@ -17,7 +17,6 @@
   --glow-blue: 0 0 15px rgba(59, 130, 246, 0.5), 0 0 30px rgba(59, 130, 246, 0.3);
   --glow-purple: 0 0 15px rgba(139, 92, 246, 0.5), 0 0 30px rgba(139, 92, 246, 0.3);
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -317,4 +316,8 @@ section {
 /* Magnetic effect for buttons */
 .magnetic-button {
   transition: transform 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.data-next-mark {
+  display: none;
 }

@@ -18,17 +18,23 @@ export default function Certifications() {
 
   const certifications = [
     {
-      title: "Mastering Cloud Engineering with AWS and Python",
-      issuer: "Cloud Services - CodeSignal",
+      title:
+        language === "en"
+          ? "Mastering Cloud Engineering with AWS and Python"
+          : "Ingeniería en la Nube con AWS y Python",
+      issuer: language === "en" ? "Cloud Services - CodeSignal" : "Servicios en la Nube - CodeSignal",
       date: "2025",
     },
     {
-      title: "Fundamental Coding Interview Prep with Python",
-      issuer: "Computer Programming - Code Signal",
+      title:
+        language === "en"
+          ? "Fundamental Coding Interview Prep with Python"
+          : "Preparación para Entrevistas de Programación con Python",
+      issuer: language === "en" ? "Computer Programming - Code Signal" : "Programación Informática - Code Signal",
       date: "2025",
     },
     {
-      title: "Técnico en desarrollo de software",
+      title: language === "en" ? "Software Development Technician" : "Técnico en Desarrollo de Software",
       issuer: "Campuslands",
       date: "2025",
     },

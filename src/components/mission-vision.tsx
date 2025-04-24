@@ -16,28 +16,35 @@ export default function MissionVision() {
   const y = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"])
   const { language, translations } = useLanguage()
 
+  // Reemplazar el contenido estático con traducciones dinámicas
   const items = [
     {
       icon: <Compass className="w-16 h-16 text-blue-400" />,
       title: translations[language].mission,
       description:
-        "Crear herramientas que no solo resuelvan problemas, sino que también hagan la vida de las personas más fácil y conecten a las personas de maneras significativas.",
+        language === "en"
+          ? "Create tools that not only solve problems, but also make people's lives easier and connect people in meaningful ways."
+          : "Crear herramientas que no solo resuelvan problemas, sino que también hagan la vida de las personas más fácil y conecten a las personas de maneras significativas.",
     },
     {
       icon: <Eye className="w-16 h-16 text-blue-400" />,
       title: translations[language].vision,
       description:
-        "Seguir creciendo tanto en lo profesional como en lo personal, aprendiendo de cada experiencia y desafiándome a salir de mi zona de confort.",
+        language === "en"
+          ? "Continue growing both professionally and personally, learning from each experience and challenging myself to step out of my comfort zone."
+          : "Seguir creciendo tanto en lo profesional como en lo personal, aprendiendo de cada experiencia y desafiándome a salir de mi zona de confort.",
     },
     {
       icon: <Heart className="w-16 h-16 text-blue-400" />,
       title: translations[language].values,
-      description: "Los principios que guían mi práctica profesional:",
+      description: translations[language].valuesDesc,
       valuesList: [
-        "Trabajo en equipo y colaboración",
-        "Aprendizaje continuo",
-        "Impacto real en cada proyecto",
-        "Disfrutar el camino y aprender de cada paso",
+        language === "en" ? "Teamwork and collaboration" : "Trabajo en equipo y colaboración",
+        language === "en" ? "Continuous learning" : "Aprendizaje continuo",
+        language === "en" ? "Real impact in every project" : "Impacto real en cada proyecto",
+        language === "en"
+          ? "Enjoying the journey and learning from each step"
+          : "Disfrutar el camino y aprender de cada paso",
       ],
     },
   ]

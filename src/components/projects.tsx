@@ -17,25 +17,35 @@ export default function Projects() {
   const y = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"])
   const { language, translations } = useLanguage()
 
+  // Actualizar los proyectos para usar traducciones dinámicas
   const projects = [
     {
-      title: "Environmentalists Database",
-      description: "A database system for environmental research",
-      image: "/placeholder.svg?height=300&width=500",
+      title: language === "en" ? "Environmentalists Database" : "Base de Datos Ambientalistas",
+      description:
+        language === "en"
+          ? "A database system for environmental research"
+          : "Un sistema de base de datos para investigación ambiental",
+      image: "/Environmentalists.jpeg",
       tags: ["MySQL"],
       githubLink: "https://github.com/YtzhakC/los-ambientales",
     },
     {
-      title: "KanBan Board",
-      description: "A task management board with drag-and-drop",
-      image: "/placeholder.svg?height=300&width=500",
+      title: language === "en" ? "KanBan Board" : "Tablero KanBan",
+      description:
+        language === "en"
+          ? "A task management board with drag-and-drop"
+          : "Un tablero de gestión de tareas con funcionalidad de arrastrar y soltar",
+      image: "/KanBan.png",
       tags: ["HTML", "CSS", "JavaScript"],
       githubLink: "https://github.com/YtzhakC/Test-JavaScript",
     },
     {
-      title: "Academic Attendance Management System",
-      description: "A system to track student attendance",
-      image: "/placeholder.svg?height=300&width=500",
+      title: language === "en" ? "Academic Attendance Management System" : "Sistema de Gestión de Asistencia Académica",
+      description:
+        language === "en"
+          ? "A system to track student attendance"
+          : "Un sistema para rastrear la asistencia de estudiantes",
+      image: "/AAMS.png",
       tags: ["Python", "SHA-256"],
       githubLink: "https://github.com/YtzhakC/PROYECTO",
     },
