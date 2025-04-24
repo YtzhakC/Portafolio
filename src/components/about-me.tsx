@@ -72,7 +72,7 @@ export default function AboutMe() {
             <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 rounded-2xl blur-lg opacity-70 animate-pulse"></div>
             <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-xl shadow-blue-900/20 border-2 border-blue-800/50">
               <Image
-                src="/images/Profile.jpeg"
+                src="/Portafolio/images/Profile.jpeg"
                 alt="Ytzhak Carvajal"
                 width={400}
                 height={600}

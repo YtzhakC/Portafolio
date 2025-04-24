@@ -25,7 +25,7 @@ export default function Projects() {
         language === "en"
           ? "A database system for environmental research"
           : "Un sistema de base de datos para investigación ambiental",
-      image: "/Environmentalists.jpeg",
+      image: "/Portafolio/Environmentalists.jpeg",
       tags: ["MySQL"],
       githubLink: "https://github.com/YtzhakC/los-ambientales",
     },
@@ -35,7 +35,7 @@ export default function Projects() {
         language === "en"
           ? "A task management board with drag-and-drop"
           : "Un tablero de gestión de tareas con funcionalidad de arrastrar y soltar",
-      image: "/KanBan.png",
+      image: "/Portafolio/KanBan.png",
       tags: ["HTML", "CSS", "JavaScript"],
       githubLink: "https://github.com/YtzhakC/Test-JavaScript",
     },
@@ -45,7 +45,7 @@ export default function Projects() {
         language === "en"
           ? "A system to track student attendance"
           : "Un sistema para rastrear la asistencia de estudiantes",
-      image: "/AAMS.png",
+      image: "/Portafolio/AAMS.png",
       tags: ["Python", "SHA-256"],
       githubLink: "https://github.com/YtzhakC/PROYECTO",
     },
