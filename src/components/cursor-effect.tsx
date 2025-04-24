@@ -53,7 +53,7 @@ export default function CursorEffect() {
       height: 60,
       width: 60,
       backgroundColor: "rgba(139, 92, 246, 0.3)",
-      mixBlendMode: "screen",
+      mixBlendMode: "screen" as "normal" | "multiply" | "screen" | "overlay" | "darken" | "lighten" | "color-dodge" | "color-burn" | "hard-light" | "soft-light" | "difference" | "exclusion" | "hue" | "saturation" | "color" | "luminosity",
     },
   }
 

@@ -27,6 +27,8 @@ const nextConfig = {
   },
   // Deshabilitar los indicadores de desarrollo
   devIndicators: false,
+  // Configuración para exportar un sitio estático
+  output: 'export',
 }
 
 export default nextConfig
