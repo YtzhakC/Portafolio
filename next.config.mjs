@@ -25,8 +25,8 @@ const nextConfig = {
     ],
     unoptimized: true,
   },
-  // Deshabilitar las devtools de NextJS
-  devIndicators: false
+  // Deshabilitar los indicadores de desarrollo
+  devIndicators: false,
 }
 
 export default nextConfig
