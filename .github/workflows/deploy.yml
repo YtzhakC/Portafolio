@@ -15,12 +15,11 @@ jobs:
         with:
           node-version: '18.x'
       - name: Install dependencies
-        # Cambiamos npm ci por npm install para regenerar el package-lock.json
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: Build
         run: npm run build
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: out # o la carpeta donde se genera tu build
+          folder: out
           branch: gh-pages
