@@ -21,7 +21,7 @@ export default function AboutMe() {
     {
       icon: <Calendar className="w-5 h-5 text-blue-400" />,
       label: language === "en" ? "Experience" : "Experiencia",
-      value: language === "en" ? "3 months" : "3 meses",
+      value: language === "en" ? "5 months" : "5 meses",
     },
     {
       icon: <MapPin className="w-5 h-5 text-blue-400" />,
@@ -67,19 +67,19 @@ export default function AboutMe() {
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative max-w-md mx-auto"
+            className="relative max-w-md mx-auto w-full"
           >
             <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 rounded-2xl blur-lg opacity-70 animate-pulse"></div>
-            <div className="relative rounded-2xl overflow-hidden shadow-xl shadow-blue-900/20 border-2 border-blue-800/50">
-  <Image
-    src="/images/Profile.jpeg"
-    alt="Ytzhak Carvajal"
-    width={400}
-    height={400}
-    className="object-cover"
-    priority
-  />
-</div>
+            <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-xl shadow-blue-900/20 border-2 border-blue-800/50">
+              <Image
+                src="/images/Profile.jpeg"
+                alt="Ytzhak Carvajal"
+                width={400}
+                height={600}
+                className="object-cover w-full h-full"
+                priority
+              />
+            </div>
           </motion.div>
 
           <motion.div
